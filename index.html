@@ -19,10 +19,12 @@
       const btn = React.createElement(
         "button",
         {
-          onClick: () => console.log("im clicked"),
+          onClick: () => console.log("I'm clicked"),
         },
         "Click me"
         );
+      const container = React.createElement("div", null, [h3, btn])
+      ReactDom.render(container, root);
     </script>
   </body>
 </html>
