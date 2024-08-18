@@ -16,6 +16,13 @@
     <!-- Load our React component. -->
     <script>
       const root = document.getElementById("root");
+      const h3 = React.createElement(
+        "button",
+        {
+          onMouseEnter: () => console.log("mouse Enter"),
+        },
+        "Hello"
+        );      
       const btn = React.createElement(
         "button",
         {
