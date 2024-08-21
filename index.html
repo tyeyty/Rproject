@@ -30,11 +30,12 @@
           Button
         </button>
       );
-      const Container = (
-        <div> 
-          <Title /> <Button />
-        </div>
-      );
+      const Container = React.createElement("div", null, [Title, Button]);
+      //const Container = (
+      //  <div> 
+      //    <Title /> <Button />
+      //  </div>
+      //);
       ReactDOM.render(Container, root);
     </script>
   </body>
