@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Add React in One Minute</title>
+  </head>
+  <body>
+    <!-- We will put our React component inside this div. -->
+    <div id="root"></div>
+
+    <!-- Load React. -->
+    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- Load our React component. -->
+    <script type="text/babel">
+      const root = document.getElementById('root');
+      const h3 = React.createElement(
+        "span",
+        {
+          //onMouseEnter: () => console.log("mouse Enter"),
+          id: "sexy-span", style: {color: "red"}
+        },
+        "Hello"
+        ); 
+      
+      const btn = React.createElement(
+        "button",
+        {
+          onClick: () => console.log("I'm clicked"),
+        },
+        "Click me"
+        ); 
+      const container = React.createElement("div", null, [Title, Button])
+      ReactDOM.render(Container, root);
+    </script>
+  </body>
+</html>
