@@ -17,25 +17,28 @@
     <!-- Load our React component. -->
     <script type="text/babel">
       const root = document.getElementById('root');
-      const Title = () => (
-        <h3 id="title" onMouseEnter={() => console.log("mouse Enter")} >
-          Hello, This is Title
-        </h3>
-      );
-      const Button = () => (
-        <button 
-          style={{ backgroundColor: "tomato", }} 
-          onClick = {() => console.log("I am clicked")}
-        >
-          Button
-        </button>
-      );
-      const Container = React.createElement("div", null, [Title, Button]);
-      //const Container = (
-      //  <div> 
-      //    <Title /> <Button />
-      //  </div>
+      function Title () {
+        return(
+          <h3 id="title" onMouseEnter={() => console.log("mouse Enter")} >
+            Hello, This is Title
+          </h3>
+        );
+      }
+      //const Button = () => (
+      //  <button 
+      //    style={{ backgroundColor: "tomato", }} 
+      //    onClick = {() => console.log("I am clicked")}
+      //  >
+      //    Button
+      //  </button>
       //);
+      //const Container = React.createElement("div", null, [Title, Button]);
+      const Container = (
+        <div> 
+          <Title /> 
+          //<Button />
+        </div>
+      );
       ReactDOM.render(Container, root);
     </script>
   </body>
