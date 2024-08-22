@@ -16,29 +16,10 @@
 
     <!-- Load our React component. -->
     <script type="text/babel">
-      const root = document.getElementById('root');
-      function Title () {
-        return(
-          <h3 id="title" onMouseEnter={() => console.log("mouse Enter")} >
-            Hello, This is Title
-          </h3>
-        );
-      }
-      //const Button = () => (
-      //  <button 
-      //    style={{ backgroundColor: "tomato", }} 
-      //    onClick = {() => console.log("I am clicked")}
-      //  >
-      //    Button
-      //  </button>
-      //);
-      //const Container = React.createElement("div", null, [Title, Button]);
-      const Container = (
-        <div> 
-          <Title /> 
-        </div>
-      );
-      ReactDOM.render(Container, root);
+    const root = ReactDOM.createRoot(
+      document.getElementById('root')
+    );
+    root.render(<h1>Hello, world!</h1>);
     </script>
   </body>
 </html>
